@@ -1,0 +1,59 @@
+        -:    0:Source:Lab1.c
+        -:    0:Graph:a-Lab1.gcno
+        -:    0:Data:a-Lab1.gcda
+        -:    0:Runs:2
+        -:    1:#include <stdio.h>
+        -:    2:#include "unity.h"
+        -:    3:
+        4:    4:void setUp()
+        -:    5:{
+        -:    6:
+        4:    7:}
+        4:    8:void tearDown()
+        -:    9:{
+        -:   10:
+        4:   11:}
+        8:   12:int function(int a, int b)
+        -:   13:{
+        8:   14:    if(a >0)
+        8:   14-block  0
+        8:   15:        return a + b;
+        8:   15-block  0
+    #####:   16:    else if(a == b)
+    %%%%%:   16-block  0
+    #####:   17:        return a*b;
+    %%%%%:   17-block  0
+        -:   18:    else
+    #####:   19:        return a-b;
+    %%%%%:   19-block  0
+        -:   20:}
+        -:   21:
+        2:   22:void Test_function2()
+        -:   23:{
+        -:   24:    
+        2:   25:    TEST_ASSERT_EQUAL(2, function(1,1));
+        2:   25-block  0
+        -:   26:
+        -:   27:
+        -:   28:
+        2:   29:}
+        2:   30:void Test_function()
+        -:   31:{
+        2:   32:    TEST_ASSERT_EQUAL(10, function(5,5));
+        2:   32-block  0
+        2:   33:    TEST_ASSERT_EQUAL(10, function(5,5));
+        2:   34:    TEST_ASSERT_EQUAL(0, function(5,-5));
+        -:   35:
+        -:   36:
+        -:   37:
+        -:   38:
+        2:   39:}
+        -:   40:
+        2:   41:int main()
+        -:   42:{
+        2:   43:    UNITY_BEGIN();
+        2:   43-block  0
+        2:   44:    RUN_TEST(Test_function);
+        2:   45:      RUN_TEST(Test_function2);
+        2:   46:    return UNITY_END();
+        -:   47:}
